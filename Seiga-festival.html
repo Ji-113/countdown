@@ -1,1 +1,63 @@
 
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset='utf-8'>
+  <title>体育祭まであと...</title>
+  <meta name="viewport" content="width=device-width,initial-scale=0.5">
+  <meta name="description"  content="体育祭までのカウントダウンです。">
+    <meta http-equiv="X-UA-Compatible">
+    <meta name="author" content="じぃ">
+    <meta name="keywords" content="じぃ,カウントダウン">
+    <meta property="og:url" content="https://ji-113.github.io/countdown/Seiga-festival.html" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="体育祭までのカウントダウン" />
+    <meta property="og:description" content="体育祭までのカウントダウンです。" />
+    <meta property="og:site_name" content="体育祭までのカウントダウン" />
+    <meta property="og:image" content="" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600&display=swap" rel="stylesheet">
+    <link rel='stylesheet' type='text/css' href='count.css'>
+    <link rel="apple-touch-icon" sizes="180x180" href="" />
+    <link rel="apple-touch-icon-precomposed" href="" />
+</head>
+<body>
+<div id="countdown"></div>
+<script>
+// 目標日時を指定（年, 月（0-11）, 日, 時, 分, 秒）
+const targetDate = new Date( 2024, 4, 16, 10, 00, 0 );
+ 
+// カウントダウンタイマー
+const ele = document.getElementById( 'countdown' );
+ 
+// カウントダウン処理
+const countdown = () => {
+  // 現在日時
+  const now = new Date();
+  // 時差
+  const distance = targetDate - now;
+ 
+  if ( distance < 0 ) {
+    ele.innerHTML = "カウントダウン終了！";
+ 
+  } else {
+    const days = Math.floor( distance / ( 1000 * 60 * 60 * 24 ) );
+    const hours = Math.floor( ( distance % ( 1000 * 60 * 60 * 24 ) ) / ( 1000 * 60 * 60 ) );
+    const minutes = Math.floor( ( distance % ( 1000 * 60 * 60 ) ) / ( 1000 * 60 ) );
+    const seconds = Math.floor( ( distance % ( 1000 * 60 ) ) / 1000 );
+    const miliseconds = distance < 0 ? 0 : Math.floor( distance % 1000 );
+ 
+    // カウントダウンタイマーのHTML更新
+    ele.innerHTML = `<div id="all"><div id="text"><br><br>&emsp;&emsp;体育祭まであと</div><br /><div id="count"><span class="days">${ days }</span>日と<span class="hours">${ String( hours ).padStart( 2, '0' ) }</span>時間<span class="minutes">${ String( minutes ).padStart( 2, '0' ) }</span>分<span class="seconds">${ String( seconds ).padStart( 2, '0' ) }</span>.${ String( miliseconds ).padStart( 3, '0' ) }秒</div></div>`;
+ 
+    // 再度タイマー更新の実行
+    window.requestAnimationFrame( countdown );
+  }
+}
+ 
+// カウントダウンタイマーの起動
+window.requestAnimationFrame( countdown );
+</script>
+</body>
+</html>
+
