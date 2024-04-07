@@ -47,7 +47,7 @@ const countdown = () => {
     const miliseconds = distance < 0 ? 0 : Math.floor( distance % 1000 );
  
     // カウントダウンタイマーのHTML更新
-    ele.innerHTML = `<div id="all"><div id="text">&emsp;&emsp;中3まであと</div><br /><div id="count"><span class="days">${ days }</span>日と<span class="hours">${ String( hours ).padStart( 2, '0' ) }</span>時間<span class="minutes">${ String( minutes ).padStart( 2, '0' ) }</span>分<span class="seconds">${ String( seconds ).padStart( 2, '0' ) }</span>.${ String( miliseconds ).padStart( 3, '0' ) }秒</div></div>`;
+    ele.innerHTML = `<div id="all"><div id="text"><br><br>&emsp;&emsp;中3まであと</div><br /><div id="count"><span class="days">${ days }</span>日と<span class="hours">${ String( hours ).padStart( 2, '0' ) }</span>時間<span class="minutes">${ String( minutes ).padStart( 2, '0' ) }</span>分<span class="seconds">${ String( seconds ).padStart( 2, '0' ) }</span>.${ String( miliseconds ).padStart( 3, '0' ) }秒</div></div>`;
  
     // 再度タイマー更新の実行
     window.requestAnimationFrame( countdown );
