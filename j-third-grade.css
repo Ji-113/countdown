@@ -12,3 +12,7 @@ html, body {
   text-align: left;
 }
 
+#count{
+  font-size: 35px;
+  text-align: center;
+}
