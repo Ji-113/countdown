@@ -1,9 +1,14 @@
 html, body {
   font-family: 'Noto Serif JP','serif','ＭＳ Ｐ明朝';
-  font-size: 16px;
   background-image: linear-gradient(90deg, rgba(65, 164, 253, 1), rgba(14, 244, 255, 1));
 }
 
 #all{
   color:#191970
 }
+
+#text{
+  font-size: 28px;
+  text-align: left;
+}
+
