@@ -5,7 +5,7 @@ const CACHE_NAME = 'pwa-sample-caches-v1';
 const urlsToCache = [
   './',
   './index.html',
-  './.html'
+  './j-third-grade.html'
   './.html'
   './css/style.css',
   './images/スクリーンショット 2024-03-31 215924.png',
