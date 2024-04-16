@@ -6,7 +6,7 @@ const urlsToCache = [
   './',
   './index.html',
   './j-third-grade.html'
-  './.html'
+  './Seiga-festival.html'
   './css/style.css',
   './images/スクリーンショット 2024-03-31 215924.png',
 ];
