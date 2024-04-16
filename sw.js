@@ -5,9 +5,10 @@ const CACHE_NAME = 'pwa-sample-caches-v1';
 const urlsToCache = [
   './',
   './index.html',
-  './j-third-grade.html'
-  './Seiga-festival.html'
+  './j-third-grade.html',
+  './Seiga-festival.html',
   './css/style.css',
+  './css/count.css',
   './images/スクリーンショット 2024-03-31 215924.png',
 ];
 
