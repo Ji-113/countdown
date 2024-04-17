@@ -15,7 +15,7 @@ p{
   text-align: center;
 }
 
-#j-third-grade {
+#j-third-grade,Seiga-festival {
 *,
 *:before,
 *:after {
@@ -33,7 +33,6 @@ body {
   padding: 30px;
 }
 
-#iroiro {
 .btn,
 a.btn,
 button.btn {
